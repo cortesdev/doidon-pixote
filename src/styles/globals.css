@@ -1,0 +1,317 @@
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+/* a span {
+  font-size: .8rem;
+} */
+
+:root  .MuiChip-root {
+  font-family: "doidon light";
+  height: 23px;
+  width: 24px;
+  margin-top: 2px;
+  padding: 0;
+}
+
+:root .MuiChip-root span{
+  padding: 0;
+  font-size: .75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.zoom {
+  height: 400px;
+  width: 90%;
+  overflow: hidden;
+  min-height: max-content;
+}
+
+.zoom .building-img {
+  width: 100%;
+  transition: transform .2s;
+  object-fit: cover;
+}
+
+.zoom:hover .building-img {
+  transform: scale(1.2);
+}
+
+
+.zoom:hover .building-img.lock {
+  width: 100%;
+  transform: scale(1);
+}
+
+@font-face {
+  font-family: "doidon light";
+  src: url("../fonts/doidon-Light.woff");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "doidon thin";
+  src: url("../fonts/doidon-Thin.woff");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "doidon regular";
+  src: url("../fonts/doidon-Regular.woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "doidon medium";
+  src: url("../fonts/doidon-Medium.woff");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "doidon bold";
+  src: url("../fonts/doidon-Bold.woff");
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root label {
+  line-height: 1.107;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+:root body {
+  font-family: 'doidon regular', -apple-system, BlinkMacSystemFont, Helvetica, Helvetica Neue, sans-serif;
+}
+
+
+
+.Carousel-indicators-2 {
+  margin-top: -2rem !important;
+}
+
+.progress {
+  background-color: #d8d8d8;
+  border-radius: 4px;
+  position: relative;
+  margin: 0;
+  height: 26px;
+  min-width: 130px;
+}
+
+.progress span {
+  mix-blend-mode: difference;
+  font-size: .6rem;
+}
+
+.progress-done {
+  background: #001AFF;
+  border-radius: 4px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
+
+.progress-done.progress-green {
+  background: #1AD24E;
+}
+
+
+
+
+/* // Scrollbars style */
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 5px;
+  background: transparent !important;
+}
+
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent !important; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.448);
+  border-radius: 10px;
+}
+
+
+
+
+/* _________MAP STYLES_________ */
+
+.main__wrapper {
+  /* display: flex;
+  justify-content: flex-start; */
+}
+
+.map {
+  width: 100%!important;
+  height: 300px !important;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+.map__container {
+  width: 100% ;
+  height: 100%;
+}
+
+.map__edit {
+  position: absolute;
+  bottom: 20px;
+  right: 16px;
+  width: 200px;
+  height: 128px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+
+
+
+/* map search */
+.map__searcher {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.searchMap {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+
+.map__results_list {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  margin-bottom: 2rem;
+  top: 40;
+  z-index: 2;
+  max-height: 200px;
+  width: 100%;
+  left: 10px;
+  overflow: scroll;
+  border-radius: 14px;
+}
+ 
+.map__results_item {
+  list-style: none;
+  background: rgba(255, 255, 255, 0.8);
+  padding:  10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.map__results_item:not(:last-child) {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+
+
+
+
+/* toaster */
+
+.Toastify__toast-theme--light.Toastify__toast--default {
+  background-color: white;
+}
+.Toastify__toast-theme--light.Toastify__toast--info {
+  background-color: #F7F7F8;
+  color: #00031F;
+}
+.Toastify__toast-theme--light.Toastify__toast--success {
+  background-color: #001AFF;
+  color: #F7F7F8;
+}
+.Toastify__toast-theme--light.Toastify__toast--warning {
+  background-color: #FFA800;
+  color: #F7F7F8;
+}
+.Toastify__toast-theme--light.Toastify__toast--error {
+  background-color: #D21A1A;
+  color: #F7F7F8;
+}
+
+.Toastify__toast-icon {
+  display: none;
+}
+
+.Toastify__close-button {
+  margin-top: 1rem;
+  opacity: 1;
+  color:#F7F7F8;
+}
+
+.Toastify__toast--info .Toastify__close-button {
+  color:#00031F;
+}
+
+ 
+.with-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.with-overlay:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0),rgba(255, 255, 255, .8));
+  z-index: 2;
+}
