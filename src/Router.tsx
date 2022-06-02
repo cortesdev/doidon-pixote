@@ -8,12 +8,13 @@ import { theme } from "./utils/theme";
 import ScrollToTop from './utils/ScrollToTop';
 
 import Home from "./pages/home";
+import Contact from "./pages/contact";
 
 export const Router: FC = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     const [open, setOpen] = useState(false)
- 
+    const maxWidth = '1048px';
 
     return (
         <BrowserRouter>
@@ -23,14 +24,19 @@ export const Router: FC = () => {
 
                 <Layout
                     open={open}
-                    setOpen={setOpen}                  
+                    setOpen={setOpen}
+                    pageWidth={maxWidth}
                 >
                     <Routes>
-                        <Route index
+                        <Route
+                            index
                             element={
-                                <Home />
+                                <Home pageWidth={maxWidth} />
                             }
                         />
+
+
+                     
 
                         <Route path="*" element={<NoMatch />} />
                     </Routes>

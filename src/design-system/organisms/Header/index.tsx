@@ -1,16 +1,22 @@
 import styled from '@emotion/styled'
 import { Stack } from '@mui/material'
+import { FC } from 'react'
 import Navbar from '../Navbar'
 
-const StyledHeader = styled.header `
-    width: 100%;
-    position: fixed;
-    top: 0;
-    padding: 1rem 1.5rem;
-`
+interface HeaderProps {
+    pageWidth?: any
+}
 
+const Header: FC<HeaderProps> = ({pageWidth}) => {
 
-const Header = () => {
+    const StyledHeader = styled.header `
+        width: ${pageWidth};
+        position: sticky;
+        margin: 0 auto;
+        top: 0;
+        padding: 1rem 0;
+    `
+
     return (
         <StyledHeader>
             <Stack direction="row" justifyContent="space-between">

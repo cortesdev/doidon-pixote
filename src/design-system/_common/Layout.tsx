@@ -14,7 +14,10 @@ interface LayoutProps {
   children?: any,
   className?: string
   bothNavsOpen?: any
+  pageWidth?: any
 }
+
+
 
 export const Layout: FC<LayoutProps> = ({
   open,
@@ -22,22 +25,22 @@ export const Layout: FC<LayoutProps> = ({
   className,
   children,
   openModal,
+  pageWidth,
   ...props }) => {
 
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-
   return (
-    <article className={className} style={{marginTop: 100}} >
+    <article className={className} >
       {isMobile && <MobileDrawer />}
 
-      <Header />
+      <Header pageWidth={pageWidth}/>
       
       <Stack direction="row" spacing={2} pt={2} >
         {children}
       </Stack>
 
-      <Footer />
+      <Footer  pageWidth={pageWidth}/>
     </article >
   );
 }
