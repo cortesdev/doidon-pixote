@@ -1,18 +1,28 @@
 import styled from '@emotion/styled'
 import { Stack } from '@mui/material'
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import Navbar from '../Navbar'
 
 interface HeaderProps {
     pageWidth?: any
 }
 
-const Header: FC<HeaderProps> = ({pageWidth}) => {
 
+
+const Header: FC<HeaderProps> = ({pageWidth}) => {
+    
+    const [scroll, setScroll] = useState(false);
+    
+     useEffect(() => {
+       window.addEventListener("scroll", () => {
+         setScroll(window.scrollY > 50);
+       });
+     }, []);
+    
     const StyledHeader = styled.header `
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
-    background: #ffffffcf;
     `
     
     const StyledContainer = styled(Stack) `
@@ -22,7 +32,7 @@ const Header: FC<HeaderProps> = ({pageWidth}) => {
     `
 
     return (
-        <StyledHeader>
+        <StyledHeader className={scroll ? "bg-light" : "bg-dark"}        >
             <StyledContainer direction="row" justifyContent="space-between">
                 <img src="/images/doidon_logo.jpeg" height="80px" alt="logo" />
 
