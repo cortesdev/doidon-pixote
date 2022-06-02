@@ -34,10 +34,7 @@ export const Router: FC = () => {
                                 <Home pageWidth={maxWidth} />
                             }
                         />
-
-
-                     
-
+ 
                         <Route path="*" element={<NoMatch />} />
                     </Routes>
 

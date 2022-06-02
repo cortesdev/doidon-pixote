@@ -24,6 +24,8 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
       <Stack direction="row" justifyContent="space-between" >
 
 
+        <img src="/images/doidon_logo.jpeg" alt="logo" width="50%" />
+
         <Stack direction="column" width='41%'>
           <Stack direction="row" justifyContent="space-between" p="15px 0" width="100%">
             <Typography size='h1'>
@@ -61,8 +63,6 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
             </Typography>
           </Stack>
         </Stack>
-
-        <img src="/images/doidon_logo.jpeg" alt="logo" width="50%" />
       </Stack>
 
 

@@ -4,6 +4,7 @@ import React, { FC } from 'react'
 import Typography from '../design-system/atoms/Typography'
 import Agenda from './agenda'
 import Contact from './contact'
+import Hero from './hero'
 import Videos from './videos'
 
 
@@ -20,31 +21,19 @@ const Home: FC<HomeProps> = ({ pageWidth }) => {
   `
 
   return (
-    <Container>
-      <Stack direction="row" justifyContent="space-between">
-        <Stack direction="column">
+    <>     
 
-          <Typography size='h1'>
-            Doidon Pixote
-          </Typography>
+      <Container>
 
-          <Typography size='h4'>
-            e os Van der Zicrey
-          </Typography>
+        {/* Subpaginas */}
 
+        <Agenda />
 
-        </Stack>
-        <img src="/images/doidon_logo.jpeg" alt="logo" />
-      </Stack>
+        <Videos />
 
-      {/* Subpaginas */}
-      
-      <Agenda />
-
-      <Videos />
-
-      <Contact />
-    </Container>
+        <Contact />
+      </Container>
+    </>
   )
 }
 

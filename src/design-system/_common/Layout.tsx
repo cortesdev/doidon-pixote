@@ -5,6 +5,7 @@ import { theme } from "../../utils/theme";
 import Navbar from "../organisms/Navbar";
 import Header from "../organisms/Header";
 import Footer from "../organisms/Footer";
+import Hero from "../../pages/hero";
 
 
 interface LayoutProps {
@@ -34,13 +35,15 @@ export const Layout: FC<LayoutProps> = ({
     <article className={className} >
       {isMobile && <MobileDrawer />}
 
-      <Header pageWidth={pageWidth}/>
-      
+      <Header pageWidth={pageWidth} />
+
+      <Hero pageWidth={pageWidth} />
+
       <Stack direction="row" spacing={2} pt={2} >
         {children}
       </Stack>
 
-      <Footer  pageWidth={pageWidth}/>
+      <Footer pageWidth={pageWidth} />
     </article >
   );
 }
