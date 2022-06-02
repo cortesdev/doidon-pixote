@@ -17,7 +17,7 @@ const Videos: FC<VideosProps> = ({ pageWidth }) => {
 
     return (
         <Videos id="videos">
-            <Typography size='h1'>
+            <Typography size='h3'>
                 Videos
             </Typography>
 

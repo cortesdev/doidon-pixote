@@ -87,10 +87,10 @@ const MobileNav: FC<MobileNavProps> = ({ }) => {
         <Box onClick={() => navigate('/')} sx={{ cursor: 'pointer' }}>
           <img
             style={{ margin: 'auto 0' }}
-            src="/svg/doidon_logo.png"
+            src="/images/doidon_logo.jpeg"
             alt="doidon logo"
-            width={100} 
-            height={20} />
+            width={40} 
+            height={40} />
         </Box>
 
         {([`left`] as const).map((anchor) => (

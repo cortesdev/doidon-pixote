@@ -17,7 +17,7 @@ const Contact: FC<ContactProps> = ({ pageWidth }) => {
 
   return (
     <Container id="contact">
-      <Typography size='h1'>
+      <Typography size='h3'>
         Contato para shows
       </Typography>
 

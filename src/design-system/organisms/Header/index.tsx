@@ -15,6 +15,7 @@ const Header: FC<HeaderProps> = ({pageWidth}) => {
         margin: 0 auto;
         top: 0;
         padding: 1rem 0;
+        background: #ffffffcf;
     `
 
     return (

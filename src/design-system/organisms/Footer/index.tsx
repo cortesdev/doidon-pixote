@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { List, ListItem, Stack } from '@mui/material'
 import { FC } from 'react'
+import { Copyright } from '../../atoms/Copyright'
 
 
 
@@ -13,21 +14,26 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
 
     const StyledFooter = styled.footer`
         position: fixed;
-        width: ${pageWidth};
+        width: 100%;
         bottom: 0;
         margin: 0 auto;
+        background: #ffffffcf;
     `
 
     return (
         <StyledFooter>
-            <List>
-                <Stack direction="row" maxWidth="200px">
-                    <ListItem>instagram</ListItem>
-                    <ListItem>spotify</ListItem>
-                    <ListItem>facebook</ListItem>
-                </Stack>
-            </List>
+            <Stack direction="row" justifyContent="space-between" p={2}>
+                <Copyright />
 
+                <List>
+                    <Stack direction="row">
+
+                        <ListItem>instagram</ListItem>
+                        <ListItem>spotify</ListItem>
+                        <ListItem>facebook</ListItem>
+                    </Stack>
+                </List>
+            </Stack>
         </StyledFooter>
     )
 }

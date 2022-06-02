@@ -166,9 +166,9 @@ export const theme = createTheme({
     // Brand Primary
     secondary: "#FF5C00",
     tertiary: "#1AD24E",
-    text: "#fff",
+    text: "#ccc",
     background: "#FCFCFD",
-    primary: "#fff",
+    primary: "#ccc",
     light: "#edeff1",
     lighter: "#F2F4FF",
     // Neutral

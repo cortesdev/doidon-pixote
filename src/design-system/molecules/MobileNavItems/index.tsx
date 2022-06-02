@@ -31,7 +31,7 @@ a {
 
  :hover {
     transition: all .25s ease-in;
-    background-color: #001AFF !important;
+    background-color: #ccc;
     color: white;
     text-decoration: none;
     
@@ -53,7 +53,7 @@ a {
   }
   .MuiListItem-root {    
     transition: all .25s ease-in;
-    background-color: #001AFF !important;
+    background-color: #ccc !important;
     color: white;
     text-decoration: none;
       
@@ -95,7 +95,7 @@ export const MobileNavItems: FC  = ({  ...props }) => {
   return (
     <Box className="navigation">
       <StyledList style={{ margin: '0 10px' }}>
-        <NavLink to="/buildings"
+        <NavLink to="#videos"
           className={({ isActive }) => (isActive ? "active" : "")}
           style={{
             minHeight: 48,
@@ -108,58 +108,17 @@ export const MobileNavItems: FC  = ({  ...props }) => {
                 minWidth: 0,
                 mr: 3,
               }}>
-                <img src="/svg/icons/Buildings.svg" height="23px" width="23px" alt="buildings icon" />
+               
               </ListItemIcon>
-              <ListItemText primary="Buildings" sx={{ fontSize: '14px' }} />
+              <ListItemText primary="Videos" sx={{ fontSize: '14px' }} />
             </div>
           </StyledListItem>
         </NavLink>
-
-        <NavLink
-          to="/activity/"
-          // onClick={handleMessengerOpen}
+ 
+        <NavLink to="#agenda"
           className={({ isActive }) => (isActive ? "active" : "")}
           style={{
             minHeight: 48,
-            padding: 1
-          }
-          }>
-          <StyledListItem sx={{ paddingLeft: '12px' }}>
-            <div style={{ display: 'inline-flex' }} onClick={() => {
-
-              console.log('clicked on activity');
-            }}>
-              <ListItemIcon sx={{
-                minWidth: 0,
-                mr: 3,
-
-              }}>
-                <img src="/svg/icons/Bell.svg" height="23px" width="23px" alt="bell icon" />
-              </ListItemIcon>
-
-              <ListItemText primary="Activity" sx={{ fontSize: '14px' }} />
-              <Chip
-                label="3"
-                sx={{
-                  "& span": {
-                    padding: '0',
-                  },
-                  height: '24px',
-                  width: '24px',
-                  marginTop: '2px',
-                  marginLeft: 1,
-                }}
-              />
-            </div>
-          </StyledListItem>
-        </NavLink>
-
-        <NavLink to="/settings"
-          className={({ isActive }) => (isActive ? "active" : "")}
-          //activeClassName="active"
-          style={{
-            minHeight: 48,
-            justifyContent: 'initial',
             padding: 1
           }
           }>
@@ -168,14 +127,34 @@ export const MobileNavItems: FC  = ({  ...props }) => {
               <ListItemIcon sx={{
                 minWidth: 0,
                 mr: 3,
-
               }}>
-                <img src="/svg/icons/GearSix.svg" height="23px" width="23px" alt="gear icon" />
+               
               </ListItemIcon>
-              <ListItemText primary="Settings" sx={{ fontSize: '14px' }} />
+              <ListItemText primary="Agenda" sx={{ fontSize: '14px' }} />
             </div>
           </StyledListItem>
         </NavLink>
+
+        <NavLink to="#contact"
+          className={({ isActive }) => (isActive ? "active" : "")}
+          style={{
+            minHeight: 48,
+            padding: 1
+          }
+          }>
+          <StyledListItem sx={{ paddingLeft: '12px' }}>
+            <div style={{ display: 'inline-flex' }}  >
+              <ListItemIcon sx={{
+                minWidth: 0,
+                mr: 3,
+              }}>
+               
+              </ListItemIcon>
+              <ListItemText primary="Contato" sx={{ fontSize: '14px' }} />
+            </div>
+          </StyledListItem>
+        </NavLink>
+
       </StyledList>
     </Box>
   );
