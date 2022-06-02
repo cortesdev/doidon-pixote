@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Stack } from '@mui/material'
 import React, { FC } from 'react'
+import { FlexSpacer } from '../design-system/atoms/FlexSpacer'
 import Typography from '../design-system/atoms/Typography'
 
 
@@ -21,6 +22,8 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
       <Typography size='h3'>
         Agenda de shows
       </Typography>
+      <FlexSpacer minHeight={3} />
+
       <Stack direction="row" justifyContent="space-between" >
 
 

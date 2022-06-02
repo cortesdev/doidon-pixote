@@ -10,21 +10,24 @@ interface HeaderProps {
 const Header: FC<HeaderProps> = ({pageWidth}) => {
 
     const StyledHeader = styled.header `
-        width: ${pageWidth};
-        position: sticky;
+    position: sticky;
+    top: 0;
+    background: #ffffffcf;
+    `
+    
+    const StyledContainer = styled(Stack) `
+        max-width: 1200px;
         margin: 0 auto;
-        top: 0;
-        padding: 1rem 0;
-        background: #ffffffcf;
+        padding: 1rem;
     `
 
     return (
         <StyledHeader>
-            <Stack direction="row" justifyContent="space-between">
+            <StyledContainer direction="row" justifyContent="space-between">
                 <img src="/images/doidon_logo.jpeg" height="80px" alt="logo" />
 
                 <Navbar />
-            </Stack>
+            </StyledContainer>
         </StyledHeader>
     )
 }

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Box } from '@mui/system'
 import React, { FC } from 'react'
+import { FlexSpacer } from '../design-system/atoms/FlexSpacer'
 import Typography from '../design-system/atoms/Typography'
 
 
@@ -21,7 +22,8 @@ const Contact: FC<ContactProps> = ({ pageWidth }) => {
       <Typography size='h3'>
         Contato para shows
       </Typography>
-
+      <FlexSpacer minHeight={3} />
+      
       <Typography size='h4'>
         telefone:
       </Typography>

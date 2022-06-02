@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Router } from './Router';
+import { Router } from './pages/Router';
 import { theme } from './utils/theme';
 import { ThemeProvider } from '@mui/material';
 import './styles/globals.css';
