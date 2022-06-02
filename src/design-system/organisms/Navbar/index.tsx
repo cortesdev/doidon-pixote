@@ -6,9 +6,8 @@ const Navbar = () => {
         <List sx={{ alignSelf: 'center'}}>
             <Stack direction="row">
                 <ListItem>home</ListItem>
-                <ListItem>shows</ListItem>
-                <ListItem>videos</ListItem>
                 <ListItem>agenda</ListItem>
+                <ListItem>videos</ListItem>
                 <ListItem>contato</ListItem>
             </Stack>
         </List>
