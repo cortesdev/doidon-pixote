@@ -23,8 +23,7 @@ const Home: FC<HomeProps> = ({ pageWidth }) => {
 
   return (
     <>     
-
-      <Container>
+      <Container > 
 
         {/* Subpaginas */}
         <FlexSpacer minHeight={5} />

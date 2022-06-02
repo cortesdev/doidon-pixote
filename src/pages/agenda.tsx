@@ -18,7 +18,7 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
   `
 
   return (
-    <Container id="Agenda">
+    <Container id="agenda">
       <Typography size='h3'>
         Agenda de shows
       </Typography>

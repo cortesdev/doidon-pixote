@@ -4,12 +4,9 @@ import { Layout } from '../design-system/_common/Layout';
 import NoMatch from "./nomatch";
 import { useMediaQuery } from "@mui/material";
 import { theme } from "../utils/theme";
-
 import ScrollToTop from '../utils/ScrollToTop';
-
 import Home from "./home";
-import Contact from "./contact";
-
+ 
 export const Router: FC = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -20,7 +17,7 @@ export const Router: FC = () => {
         <BrowserRouter>
             <ScrollToTop />
 
-            <main>
+            <main id='home'>
 
                 <Layout
                     open={open}

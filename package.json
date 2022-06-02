@@ -18,10 +18,13 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/react-leaflet": "^2.8.2",
+    "@types/react-router-hash-link": "^2.4.5",
     "@types/yup": "^0.29.14",
     "axios": "^0.26.1",
     "clsx": "^1.1.1",
     "env-cmd": "^10.1.0",
+    "font-awesome": "^4.7.0",
+    "fortawesome": "^0.0.1-security",
     "keycloak-js": "^17.0.1",
     "leaflet": "^1.8.0",
     "lodash": "^4.17.21",
@@ -30,6 +33,7 @@
     "react-dom": "^18.0.0",
     "react-hook-form": "^7.31.1",
     "react-router-dom": "^6.3.0",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.0.1",
     "swiper": "^8.1.4",
@@ -61,5 +65,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.1.1"
   }
 }

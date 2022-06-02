@@ -1,11 +1,14 @@
+import { Box } from "@mui/material"
+import Typography from "../Typography"
 
 export const Copyright = ({ ...props }) => {
-    return (
-      <span>
+  return (
+    <Box alignSelf='center'>
+      <Typography size="small">
         {'© '}
         {`${new Date().getFullYear()} `}
-        Doindon Pixote
-      </span>
-    )
-  }
-  
+        Doidon Pixote
+      </Typography>
+    </Box>
+  )
+}
