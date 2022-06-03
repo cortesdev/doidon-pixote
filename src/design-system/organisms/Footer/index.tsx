@@ -11,8 +11,7 @@ interface FooterProps {
 const Footer: FC<FooterProps> = ({ pageWidth }) => {
 
 
-    const StyledFooter = styled.footer`
-        position: fixed;
+    const StyledFooter = styled.footer`       
         width: 100%;
         bottom: 0;
         margin: 0 auto;
