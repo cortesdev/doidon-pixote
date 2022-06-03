@@ -7,7 +7,7 @@ export const Copyright = ({ ...props }) => {
       <Typography size="small">
         {'© '}
         {`${new Date().getFullYear()} `}
-        Doidon Pixote
+        Doidon Pixote  e os Van der Zicrey
       </Typography>
     </Box>
   )

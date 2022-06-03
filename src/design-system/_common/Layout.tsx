@@ -4,7 +4,7 @@ import MobileDrawer from "../organisms/MobileNav";
 import { theme } from "../../styles/theme";
 import Header from "../organisms/Header";
 import Footer from "../organisms/Footer";
-import Hero from "../organisms/hero";
+import Hero from "../organisms/Hero";
 
 
 interface LayoutProps {
