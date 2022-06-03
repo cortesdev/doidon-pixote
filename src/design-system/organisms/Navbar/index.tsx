@@ -10,24 +10,24 @@ const Navbar = () => {
             <Stack direction="row">
                 <ListItem>
                     <Link to="#home" smooth>
-                       <Typography size="h2" weight='old'>home</Typography>
+                       <Typography size="h3" weight='old'>home</Typography>
                     </Link>
                 </ListItem>
                 <ListItem>
                     <Link to="#agenda" smooth>
-                    <Typography size="h2" weight='old'>agenda</Typography>
+                    <Typography size="h3" weight='old'>agenda</Typography>
 
                     </Link>
                 </ListItem>
                 <ListItem>
                     <Link to="#videos" smooth>
-                    <Typography size="h2" weight='old'>videos</Typography>
+                    <Typography size="h3" weight='old'>videos</Typography>
 
                     </Link>
                 </ListItem>
                 <ListItem>
                     <Link to="#contact" smooth>
-                    <Typography size="h2" weight='old'>contato</Typography>
+                    <Typography size="h3" weight='old'>contato</Typography>
                     </Link>
                 </ListItem>
             </Stack>

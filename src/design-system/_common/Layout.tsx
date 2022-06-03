@@ -4,7 +4,7 @@ import MobileDrawer from "../organisms/MobileNav";
 import { theme } from "../../styles/theme";
 import Header from "../organisms/Header";
 import Footer from "../organisms/Footer";
-import Hero from "../../pages/hero";
+import Hero from "../organisms/hero";
 
 
 interface LayoutProps {
@@ -28,7 +28,7 @@ export const Layout: FC<LayoutProps> = ({
   pageWidth,
   ...props }) => {
 
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <article className={className} >

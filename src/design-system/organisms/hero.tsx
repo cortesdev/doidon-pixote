@@ -2,9 +2,9 @@ import styled from '@emotion/styled'
 import { Grid, List, ListItemButton, Stack } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { FC } from 'react'
-import { FlexSpacer } from '../design-system/atoms/FlexSpacer'
-import Typography from '../design-system/atoms/Typography'
-import ImgSwiper from '../design-system/molecules/ImgSwiper'
+import { FlexSpacer } from '../atoms/FlexSpacer'
+import Typography from '../atoms/Typography'
+import ImgSwiper from '../molecules/ImgSwiper'
 
 
 interface HeroProps {
@@ -35,16 +35,16 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
   `
 
   return (
-    <Container id="Hero" sx={{ backgroundImage: 'wheat' }}>
+    <Container id="Hero">
       <HeroImage />
       <FlexSpacer minHeight={6} />
 
-      <HeroCenter direction="row" justifyContent="space-between" sx={{ maxWidth: pageWidth}}>
+      <HeroCenter direction="row" justifyContent="space-between" sx={{ maxWidth: pageWidth }}>
 
-        <Grid container sx={{margin: '0 3rem' }}>
+        <Grid container sx={{ margin: '0 3rem' }}>
 
 
-          <Grid item direction="column" sx={{marginTop: "220px"}} width={{ xs: '100%', md: '60%' }} mt="15%" color="white" zIndex={999}>
+          <Grid item direction="column" sx={{ marginTop: "220px" }} width={{ xs: '100%', md: '60%' }} mt="15%" color="white" zIndex={999}>
 
             <Typography size='h1' weight='old'>
               Doidon Pixote
@@ -55,7 +55,7 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
             </Typography>
 
             {!isMobile &&
-              <List style={{maxWidth: "60%"}}>
+              <List style={{ maxWidth: "60%" }}>
                 <Stack direction="row">
                   <ListItemButton sx={{ paddingLeft: 0 }} component="a" target="_blank" href="https://www.amazon.de/music/player/artists/B083PV5JS6/doidon-pixote-e-os-van-der-zicrey">
                     <img src="/images/SVG/Amazon.svg" alt="amazon" />
@@ -68,9 +68,12 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
               </List>
             }
           </Grid>
-          <Grid item direction="column"  sx={{marginTop: "220px"}}  width={{ xs: '100%', md: '40%' }} >
-            <ImgSwiper />
-          </Grid>
+          
+          {!isMobile &&
+            <Grid item direction="column" sx={{ marginTop: "220px" }} width={{ xs: '100%', md: '40%' }} >
+              <ImgSwiper />
+            </Grid>
+          }
         </Grid>
       </HeroCenter>
 

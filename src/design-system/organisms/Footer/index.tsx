@@ -22,9 +22,9 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
     `
 
     const linkData = [
-        { src: '/images/facebook.svg', alt: 'facebook', url: 'https://www.facebook.com/' },
-        { src: '/images/insta.svg', alt: 'insta', url: 'https://www.instagram.com/' },
-        { src: '/images/spotify.svg', alt: 'spotify', url: 'https://www.spotify.com/' },
+        { src: '/images/facebook.svg', alt: 'facebook', url: 'https://www.facebook.com/doidonpixote' },
+        { src: '/images/insta.svg', alt: 'insta', url: 'https://www.instagram.com/doidonpix/' },
+        { src: '/images/spotify.svg', alt: 'spotify', url: 'https://open.spotify.com/artist/1H3kmZKczSXJ2jum4zrqR3' },
     ]
 
     return (

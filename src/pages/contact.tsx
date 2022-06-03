@@ -19,18 +19,35 @@ const Contact: FC<ContactProps> = ({ pageWidth }) => {
 
   return (
     <Container id="contact" mb={4}>
-      <Typography size='h3'>
+      <Typography size='h3' weight='old'>
         Contato para shows:
       </Typography>
+
       <FlexSpacer minHeight={3} />
       
-      <Typography size='body'>
+      <Typography size='h4'>
         telefone:
       </Typography>
+
+      <FlexSpacer minHeight={3} />
 
       <Typography size='h6'>
         21 303030303
       </Typography>
+
+
+      <FlexSpacer minHeight={5} />
+
+      <Typography size='h3' weight='old'>
+        Loja:
+      </Typography>
+
+      <FlexSpacer minHeight={3} />
+
+      <Typography size='h6'>
+        {'Mercado Livre [link aqui]'}
+      </Typography>
+
     </Container>
   )
 }

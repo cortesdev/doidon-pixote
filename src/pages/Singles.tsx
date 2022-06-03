@@ -18,7 +18,7 @@ const Singles: FC<SinglesProps> = ({ pageWidth }) => {
 
     return (
         <Singles id="Singles">
-            <Typography size='h3'>
+            <Typography size='h3' weight='old'>
                 Singles
             </Typography>
 

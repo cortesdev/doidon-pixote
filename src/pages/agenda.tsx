@@ -1,8 +1,9 @@
 import styled from '@emotion/styled'
-import { List, ListItem, Stack } from '@mui/material'
+import { List, ListItem, Stack, useMediaQuery } from '@mui/material'
 import React, { FC } from 'react'
 import { FlexSpacer } from '../design-system/atoms/FlexSpacer'
 import Typography from '../design-system/atoms/Typography'
+import { theme } from '../styles/theme'
 import { agendaShows } from '../__mock__/agendaShows'
 
 interface AgendaProps {
@@ -16,19 +17,20 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
       width: ${pageWidth};
       margin: 0 auto;
   `
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <Container id="agenda">
-      <Typography size='h3'>
-        Agenda de shows
+      <Typography size='h3' weight='old'>
+        Tour e agenda para Shows
       </Typography>
       <FlexSpacer minHeight={3} />
 
       <Stack direction={{xs: 'column', md: 'row'}} justifyContent="space-between" >
 
-
+      {!isMobile &&
         <img src="/images/doidon_logo.jpeg" alt="logo" width="50%" />
-
+      }
         <Stack direction="column" width={{xs: '100%', md: '41%'}}>
 
           <List>
@@ -37,7 +39,7 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
                 <Stack direction='row' justifyContent={ 'start'} p="0 1rem" width="100%">
 
                   <Stack direction="column" alignItems="center">
-                    <Typography size="h1" weight='old'>
+                    <Typography size="h2" weight='old'>
                       {item.dia}
                     </Typography>
                     <Typography size='body'>

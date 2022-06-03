@@ -5,7 +5,7 @@ import { FlexSpacer } from '../design-system/atoms/FlexSpacer'
 import Typography from '../design-system/atoms/Typography'
 import Agenda from './agenda'
 import Contact from './contact'
-import Hero from './hero'
+import Hero from '../design-system/organisms/hero'
 import Singles from './Singles'
 import Videos from './videos'
 

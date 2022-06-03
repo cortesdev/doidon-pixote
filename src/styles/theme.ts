@@ -207,16 +207,16 @@ export const theme = createTheme({
     },  
     h1: {
       fontFamily: "doidon old",
-      fontSize: "6rem",
-      lineHeight: "1.2em",
+      fontSize: "8rem",
+      lineHeight: "1em",
     },
     h2: {
       fontFamily: "doidon bold",
-      fontSize: "2.125rem",
-      lineHeight: "1.25em",
+      fontSize: "5rem",
+      lineHeight: "4rem",
     },
     h3: {
-      fontSize: "1.5rem",
+      fontSize: "2rem",
       lineHeight: "1.875rem",
     },
     h4: {
