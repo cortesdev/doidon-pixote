@@ -3,10 +3,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from '../design-system/_common/Layout';
 import NoMatch from "./nomatch";
 import { useMediaQuery } from "@mui/material";
-import { theme } from "../utils/theme";
+import { theme } from "../styles/theme";
 import ScrollToTop from '../utils/ScrollToTop';
 import Home from "./home";
- 
+
 export const Router: FC = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -18,7 +18,6 @@ export const Router: FC = () => {
             <ScrollToTop />
 
             <main id='home'>
-
                 <Layout
                     open={open}
                     setOpen={setOpen}
@@ -31,12 +30,10 @@ export const Router: FC = () => {
                                 <Home pageWidth={maxWidth} />
                             }
                         />
- 
+
                         <Route path="*" element={<NoMatch />} />
                     </Routes>
-
                 </Layout>
-
             </main>
         </BrowserRouter>
     )

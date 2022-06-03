@@ -1,8 +1,7 @@
 import { FC } from "react";
 import { Stack, useMediaQuery } from "@mui/material";
 import MobileDrawer from "../organisms/MobileNav";
-import { theme } from "../../utils/theme";
-import Navbar from "../organisms/Navbar";
+import { theme } from "../../styles/theme";
 import Header from "../organisms/Header";
 import Footer from "../organisms/Footer";
 import Hero from "../../pages/hero";
@@ -35,9 +34,9 @@ export const Layout: FC<LayoutProps> = ({
     <article className={className} >
       {isMobile && <MobileDrawer />}
 
-      <Header pageWidth={pageWidth} />
+      {!isMobile && <Header pageWidth={pageWidth} />}
 
-      <Hero pageWidth={pageWidth} />
+      <Hero pageWidth={pageWidth} isMobile={isMobile} />
 
       <Stack direction="row" spacing={2} pt={2} >
         {children}

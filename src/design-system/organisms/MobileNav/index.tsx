@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { FC } from 'react'
-import { theme } from '../../../utils/theme';
+import { theme } from '../../../styles/theme';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close'
 import { MobileNavItems } from '../../molecules/MobileNavItems';

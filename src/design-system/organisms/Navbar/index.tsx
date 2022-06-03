@@ -1,6 +1,7 @@
 import { List, ListItem, Stack } from '@mui/material'
 import React from 'react'
 import { HashLink as Link } from 'react-router-hash-link';
+import Typography from '../../atoms/Typography';
 
 const Navbar = () => {
 
@@ -9,22 +10,24 @@ const Navbar = () => {
             <Stack direction="row">
                 <ListItem>
                     <Link to="#home" smooth>
-                        home
+                       <Typography size="h2" weight='old'>home</Typography>
                     </Link>
                 </ListItem>
                 <ListItem>
                     <Link to="#agenda" smooth>
-                        agenda
+                    <Typography size="h2" weight='old'>agenda</Typography>
+
                     </Link>
                 </ListItem>
                 <ListItem>
                     <Link to="#videos" smooth>
-                        videos
+                    <Typography size="h2" weight='old'>videos</Typography>
+
                     </Link>
                 </ListItem>
                 <ListItem>
                     <Link to="#contact" smooth>
-                        contato
+                    <Typography size="h2" weight='old'>contato</Typography>
                     </Link>
                 </ListItem>
             </Stack>

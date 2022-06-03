@@ -6,6 +6,7 @@ import Typography from '../design-system/atoms/Typography'
 import Agenda from './agenda'
 import Contact from './contact'
 import Hero from './hero'
+import Singles from './Singles'
 import Videos from './videos'
 
 
@@ -22,8 +23,8 @@ const Home: FC<HomeProps> = ({ pageWidth }) => {
   `
 
   return (
-    <>     
-      <Container > 
+    <>
+      <Container>
 
         {/* Subpaginas */}
         <FlexSpacer minHeight={5} />
@@ -31,8 +32,10 @@ const Home: FC<HomeProps> = ({ pageWidth }) => {
         <FlexSpacer minHeight={5} />
         <Videos />
         <FlexSpacer minHeight={5} />
+        <Singles />
+        <FlexSpacer minHeight={5} />
         <Contact />
-        
+
         <FlexSpacer minHeight={10} />
       </Container>
     </>

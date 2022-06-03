@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import { IconButton } from "@mui/material"
 import { FC } from "react"
-import { theme } from "../../../../utils/theme"
+import { theme } from "../../../../styles/theme"
 
 interface OptionsProps {
     top?: number,

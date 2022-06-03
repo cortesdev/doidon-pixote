@@ -20,14 +20,15 @@ const Contact: FC<ContactProps> = ({ pageWidth }) => {
   return (
     <Container id="contact" mb={4}>
       <Typography size='h3'>
-        Contato para shows
+        Contato para shows:
       </Typography>
       <FlexSpacer minHeight={3} />
       
-      <Typography size='h4'>
+      <Typography size='body'>
         telefone:
       </Typography>
-      <Typography size='h4'>
+
+      <Typography size='h6'>
         21 303030303
       </Typography>
     </Container>

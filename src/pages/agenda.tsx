@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
-import { Stack } from '@mui/material'
+import { List, ListItem, Stack } from '@mui/material'
 import React, { FC } from 'react'
 import { FlexSpacer } from '../design-system/atoms/FlexSpacer'
 import Typography from '../design-system/atoms/Typography'
-
+import { agendaShows } from '../__mock__/agendaShows'
 
 interface AgendaProps {
   pageWidth?: any
@@ -24,47 +24,41 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
       </Typography>
       <FlexSpacer minHeight={3} />
 
-      <Stack direction="row" justifyContent="space-between" >
+      <Stack direction={{xs: 'column', md: 'row'}} justifyContent="space-between" >
 
 
         <img src="/images/doidon_logo.jpeg" alt="logo" width="50%" />
 
-        <Stack direction="column" width='41%'>
-          <Stack direction="row" justifyContent="space-between" p="15px 0" width="100%">
-            <Typography size='h1'>
-              21
-            </Typography>
-            <Typography size='h4'>
-              Circo voador
-            </Typography>
-          </Stack>
+        <Stack direction="column" width={{xs: '100%', md: '41%'}}>
 
-          <Stack direction="row" justifyContent="space-between" p="15px 0" width="100%">
-            <Typography size='h1'>
-              23
-            </Typography>
-            <Typography size='h4'>
-              Casarao amarelo
-            </Typography>
-          </Stack>
+          <List>
+            {agendaShows.map((item, index) =>
+              <ListItem key={index}>
+                <Stack direction='row' justifyContent={ 'start'} p="0 1rem" width="100%">
 
-          <Stack direction="row" justifyContent="space-between" p="15px 0" width="100%">
-            <Typography size='h1'>
-              24
-            </Typography>
-            <Typography size='h4'>
-              Beco da bohemia
-            </Typography>
-          </Stack>
+                  <Stack direction="column" alignItems="center">
+                    <Typography size="h1" weight='old'>
+                      {item.dia}
+                    </Typography>
+                    <Typography size='body'>
+                      {item.mes}
+                    </Typography>
+                  </Stack>
 
-          <Stack direction="row" justifyContent="space-between" p="15px 0" width="100%">
-            <Typography size='h1'>
-              24
-            </Typography>
-            <Typography size='h4'>
-              hangar 110
-            </Typography>
-          </Stack>
+                  <Stack direction="column" justifyContent="center" ml={2}>
+                    <Typography size='h6' mb={2}>
+                      {item.local}
+                    </Typography>
+                    <Typography size='small'>
+                      {item.hora}
+                    </Typography>
+                  </Stack>
+
+                </Stack>
+              </ListItem>
+            )}
+          </List>
+         
         </Stack>
       </Stack>
 

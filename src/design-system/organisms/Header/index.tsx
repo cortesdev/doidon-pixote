@@ -23,6 +23,7 @@ const Header: FC<HeaderProps> = ({pageWidth}) => {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 9999;
     `
     
     const StyledContainer = styled(Stack) `
