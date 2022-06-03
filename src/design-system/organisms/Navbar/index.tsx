@@ -13,7 +13,7 @@ const Navbar = () => {
                         <Typography size="h3" weight='old'>home</Typography>
                     </Link>
                 </ListItem>
-                <ListItem sx={{ transform: 'rotate(-5deg)' }}>
+                <ListItem sx={{ transform: 'scale(1.35) rotate(-5deg)' }}>
                     <Link to="#agenda" smooth>
                         <Typography size="h3" weight='old'>agenda</Typography>
 
@@ -25,7 +25,7 @@ const Navbar = () => {
 
                     </Link>
                 </ListItem>
-                <ListItem sx={{ transform: 'rotate(-3.5deg)' }}>
+                <ListItem sx={{ transform: 'scale(1.5) rotate(-3.5deg)' }}>
                     <Link to="#contact" smooth>
                         <Typography size="h3" weight='old'>contato</Typography>
                     </Link>

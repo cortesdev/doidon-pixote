@@ -45,15 +45,15 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
         <Grid container sx={{ margin: '0 3rem' }}>
 
 
-          <Grid item direction="column" marginTop={{ xs: '30px', md: "50px" }} width={{ xs: '100%', md: '60%' }} mt="15%" color="white" zIndex={999}>
+          <Grid item direction="column" marginTop={{ xs: '100px', md: "200px" }} width={{ xs: '100%', md: '60%' }} mt="15%" color="white" zIndex={999}>
 
-            <Stack direction="row">
+            <Stack direction={{sx: 'column', md: 'row'}}>
 
               <Typography size='h1' weight='old' sx={{ transform: 'rotate(3deg)', marginBottom: '-3rem' }}>
                 Doidon
               </Typography>
 
-              <Typography size='h1' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '1rem', fontSize: '15rem', marginLeft: '2rem' }}>
+              <Typography size='h1' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '1rem', fontSize: '9rem', marginLeft: '2rem' }}>
                 Pixote
               </Typography>
             </Stack>
