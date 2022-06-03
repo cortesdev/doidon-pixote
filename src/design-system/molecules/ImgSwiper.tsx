@@ -18,7 +18,7 @@ const StyledControls = styled(Stack)`
     z-index: 999;
 
     @media (min-width: 900px) {
-        width: 100% !important;
+        width: 85% !important;
     }
  
     

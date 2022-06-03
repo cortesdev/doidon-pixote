@@ -167,7 +167,7 @@ export const theme = createTheme({
     secondary: "#FF5C00",
     tertiary: "#1AD24E",
     text: "#ccc",
-    background: "#FCFCFD",
+    background: "#000",
     primary: "#ccc",
     light: "#edeff1",
     lighter: "#F2F4FF",

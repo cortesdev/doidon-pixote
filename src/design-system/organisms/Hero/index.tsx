@@ -63,7 +63,7 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
             </Typography>
 
 
-            <List style={{ maxWidth: "60%" }}>
+            <List style={{ maxWidth: "50%" }}>
               <Stack direction="row">
                 <ListItemButton sx={{ paddingLeft: 0 }} component="a" target="_blank"
                   href="https://www.amazon.de/music/player/artists/B083PV5JS6/doidon-pixote-e-os-van-der-zicrey">
