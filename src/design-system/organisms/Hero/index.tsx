@@ -50,16 +50,16 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
             {!isMobile ? <>
               <Stack direction={{ sx: 'column', md: 'row' }}>
 
-                <Typography size='h1' weight='old' sx={{ transform: 'rotate(3deg)', marginBottom: '-3rem' }}>
+                <Typography size='h1' weight='old' sx={{ transform: 'rotate(3deg)', marginBottom: '-3rem', textShadow: '2px 7px 5px #0000008a' }}>
                   Doidon
                 </Typography>
 
-                <Typography size='h1' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '1rem', fontSize: '9rem', marginLeft: '2rem' }}>
+                <Typography size='h1' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '1rem', fontSize: '9rem', marginLeft: '2rem' ,textShadow: '2px 7px 5px #0000008a'}}>
                   Pixote
                 </Typography>
               </Stack>
 
-              <Typography size='h4' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '6rem', fontSize: '3rem', marginLeft: '2rem' }}>
+              <Typography size='h4' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '6rem', fontSize: '3rem', marginLeft: '2rem', textShadow: '2px 7px 5px #0000008a' }}>
                 e os Van der Zicrey
               </Typography>
             </>
