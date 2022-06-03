@@ -31,14 +31,14 @@ export const Layout: FC<LayoutProps> = ({
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <article className={className} >
+    <article className={className}>
       {isMobile && <MobileDrawer />}
 
       {!isMobile && <Header pageWidth={pageWidth} />}
 
       <Hero pageWidth={pageWidth} isMobile={isMobile} />
 
-      <Stack direction="row" spacing={2} pt={2} >
+      <Stack direction="row" spacing={2} pt={2} mx={{xs: 3, md: 5}}>
         {children}
       </Stack>
 

@@ -12,13 +12,13 @@ import Typography from '../atoms/Typography';
 
 const StyledControls = styled(Stack)`
     position: relative;
-    width: 460px !important;
+    width: 400px !important;
     height: 45px;
     border-radius: 5px;
     z-index: 999;
 
     @media (min-width: 900px) {
-        width: 70% !important;
+        width: 100% !important;
     }
  
     
@@ -26,7 +26,8 @@ const StyledControls = styled(Stack)`
     .swiper-button-prev {
         height: 30px;        
         margin-top: -180px;
-
+        margin-left: -20px;
+        
         &:after {
             font-size: 21px;
             color: white;

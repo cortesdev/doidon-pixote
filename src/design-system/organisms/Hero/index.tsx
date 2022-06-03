@@ -80,7 +80,7 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
           </Grid>
 
           {!isMobile &&
-            <Grid item direction="column" sx={{ marginTop: "220px" }} width={{ xs: '100%', md: '40%' }} >
+            <Grid item direction="column" sx={{ marginTop: "220px" }} width={{ xs: '100%', md: '30%' }} >
               <ImgSwiper />
             </Grid>
           }
