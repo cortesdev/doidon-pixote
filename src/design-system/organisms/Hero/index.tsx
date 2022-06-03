@@ -47,21 +47,28 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
 
           <Grid item direction="column" marginTop={{ xs: '100px', md: "200px" }} width={{ xs: '100%', md: '60%' }} mt="15%" color="white" zIndex={999}>
 
-            <Stack direction={{sx: 'column', md: 'row'}}>
+            {!isMobile ? <>
+              <Stack direction={{ sx: 'column', md: 'row' }}>
 
-              <Typography size='h1' weight='old' sx={{ transform: 'rotate(3deg)', marginBottom: '-3rem' }}>
-                Doidon
+                <Typography size='h1' weight='old' sx={{ transform: 'rotate(3deg)', marginBottom: '-3rem' }}>
+                  Doidon
+                </Typography>
+
+                <Typography size='h1' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '1rem', fontSize: '9rem', marginLeft: '2rem' }}>
+                  Pixote
+                </Typography>
+              </Stack>
+
+              <Typography size='h4' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '6rem', fontSize: '3rem', marginLeft: '2rem' }}>
+                e os Van der Zicrey
               </Typography>
-
-              <Typography size='h1' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '1rem', fontSize: '9rem', marginLeft: '2rem' }}>
-                Pixote
-              </Typography>
-            </Stack>
-
-            <Typography size='h4' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '6rem', fontSize: '3rem', marginLeft: '2rem' }}>
-              e os Van der Zicrey
-            </Typography>
-
+            </>
+              : <>
+                <Typography size='h1' weight='old'>Doidon</Typography>
+                <Typography size='h1' weight='old'>Pixote</Typography>
+                <Typography size='h4' weight='old'> e os Van der Zicrey</Typography>
+              </>
+            }
 
             <List style={{ maxWidth: "50%" }}>
               <Stack direction="row">

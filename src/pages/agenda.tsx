@@ -13,6 +13,12 @@ interface AgendaProps {
 const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
 
 
+  const StyledList = styled(List)`
+  background: black;
+  border-radius: 20px;
+  box-shadow: 2px 2px 12px 10px #000;
+}
+  `
   const Container = styled.div`
       width: ${pageWidth};
       margin: 0 auto;
@@ -26,17 +32,17 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
       </Typography>
       <FlexSpacer minHeight={3} />
 
-      <Stack direction={{xs: 'column', md: 'row'}} justifyContent="space-between" >
+      <Stack direction={{ xs: 'column', md: 'row' }} justifyContent="space-between" >
 
-      {!isMobile &&
-        <img src="/images/doidon_logo.jpeg" alt="logo" width="50%" />
-      }
-        <Stack direction="column" width={{xs: '100%', md: '41%'}}>
+        {!isMobile &&
+          <img src="/images/doidon_logo.jpeg" alt="logo" width="50%" />
+        }
+        <Stack direction="column" width={{ xs: '100%', md: '41%' }}>
 
-          <List>
+          <StyledList>
             {agendaShows.map((item, index) =>
               <ListItem key={index}>
-                <Stack direction='row' justifyContent={ 'start'} p="0 1rem" width="100%">
+                <Stack direction='row' justifyContent={'start'} p="0 1rem" width="100%">
 
                   <Stack direction="column" alignItems="center">
                     <Typography size="h2" weight='old'>
@@ -59,8 +65,8 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
                 </Stack>
               </ListItem>
             )}
-          </List>
-         
+          </StyledList>
+
         </Stack>
       </Stack>
 

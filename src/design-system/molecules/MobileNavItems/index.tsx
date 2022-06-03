@@ -31,7 +31,7 @@ a {
 
  :hover {
     transition: all .25s ease-in;
-    background-color: #ccc;
+    background-color: #000;
     color: white;
     text-decoration: none;
     
@@ -53,7 +53,7 @@ a {
   }
   .MuiListItem-root {    
     transition: all .25s ease-in;
-    background-color: #ccc !important;
+    background-color: #000 !important;
     color: white;
     text-decoration: none;
       
