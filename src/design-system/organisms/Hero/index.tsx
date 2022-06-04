@@ -43,7 +43,7 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
       <HeroCenter direction="row" justifyContent="space-between" sx={{ maxWidth: '100%', display: 'flex', height: '89vh' }}>
 
 
-        <Stack direction="column" marginTop={{ xs: '100px', md: "auto" }} width={{ xs: '100%' }} mt="15%" color="white" zIndex={999}>
+        <Stack direction="column" marginTop={{ xs: '100px', md: "auto" }} width={{ xs: '100%' }} mb="5%" color="white" zIndex={999}>
 
           {!isMobile ? <>
             {/* <Stack direction={{ sx: 'column', md: 'row' }}>
