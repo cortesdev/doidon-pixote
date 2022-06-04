@@ -78,14 +78,20 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
             <Grid item direction="row">
               <ListItemButton sx={{ paddingLeft: 0 }} component="a" target="_blank"
                 href="https://www.amazon.de/music/player/artists/B083PV5JS6/doidon-pixote-e-os-van-der-zicrey">
-                <img src="/images/SVG/Amazon.svg" alt="amazon" />
+                <img src="/images/SVG/Amazon.svg" alt="amazon"
+                  style={{ borderRadius: 5, border: '1px solid white' }}
+                />
               </ListItemButton>
             </Grid>
             <Grid item direction="row">
 
-              <ListItemButton component="a" target="_blank"
+              <ListItemButton
+                component="a"
+                target="_blank"
                 href="https://open.spotify.com/artist/1H3kmZKczSXJ2jum4zrqR3">
-                <img src="/images/SVG/Spotify.svg" alt="spotify" />
+                <img src="/images/SVG/Spotify.svg" alt="spotify"
+                  style={{ borderRadius: 5, border: '1px solid white' }}
+                />
               </ListItemButton>
             </Grid>
           </Grid>
