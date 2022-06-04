@@ -3,11 +3,11 @@ import Typography from "../Typography"
 
 export const Copyright = ({ ...props }) => {
   return (
-    <Box alignSelf='center'>
-      <Typography size="small" color="black">
+    <Box alignSelf='end' textAlign="right" display="flex">
+      <Typography size="small" ml="auto"  mr="auto" >
         {'© '}
         {`${new Date().getFullYear()} `}
-        Doidon Pixote  e os Van der Zicrey
+        Doidon Pixote <br /> todos os direitos reservados
       </Typography>
     </Box>
   )

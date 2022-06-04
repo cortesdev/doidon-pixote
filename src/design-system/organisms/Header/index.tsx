@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Stack } from '@mui/material'
 import { FC, useEffect, useState } from 'react'
-import Navbar from '../Navbar'
+import Navbar from '../../molecules/Navbar'
 
 interface HeaderProps {
     pageWidth?: any
@@ -35,7 +35,7 @@ const Header: FC<HeaderProps> = ({pageWidth}) => {
     return (
         <StyledHeader className={scroll ? "bg-light" : "bg-dark"}        >
             <StyledContainer direction="row" justifyContent="space-between">
-                <img src="/images/doidon_logo.jpeg" height="80px" alt="logo" />
+                <img src="/images/SVG/logo-doidon-white.svg" height="70px" alt="logo" />
 
                 <Navbar />
             </StyledContainer>

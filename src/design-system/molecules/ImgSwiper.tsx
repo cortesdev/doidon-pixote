@@ -18,7 +18,7 @@ const StyledControls = styled(Stack)`
     z-index: 999;
 
     @media (min-width: 900px) {
-        width: 85% !important;
+        width: 100% !important;
     }
  
     
@@ -27,7 +27,6 @@ const StyledControls = styled(Stack)`
         height: 30px;        
         margin-top: -180px;
         margin-left: -20px;
-        
         &:after {
             font-size: 21px;
             color: white;

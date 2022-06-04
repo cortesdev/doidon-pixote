@@ -8,7 +8,7 @@ import {
 
 
 export interface TypographyProps extends Omit<MTypographyProps, "variant"> {
-  weight?: "bold" | "regular" | "thin" | "medium" | "light"| "italic"| "old";
+  weight?: "bold" | "regular" | "thin" | "medium" | "light"| "italic"| "old"| "zombie";
   size?:
   | "body"
   | "bodyBold"

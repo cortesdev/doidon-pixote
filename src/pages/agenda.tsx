@@ -35,11 +35,20 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
       <Stack direction={{ xs: 'column', md: 'row' }} justifyContent="space-between" >
 
         {!isMobile &&
-          <img src="/images/doidon_logo.jpeg" alt="logo" width="50%" />
+          <img src="/images/foto_vert.jpg" alt="logo" width="50%" />
+          // <ImgSwiper />
+
         }
+
         <Stack direction="column" width={{ xs: '100%', md: '41%' }}>
+          <iframe title="spotify" style={{ borderRadius: 12 }} src="https://open.spotify.com/embed/artist/1H3kmZKczSXJ2jum4zrqR3?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
           <StyledList>
+
+            <Typography size="h3" weight='old' ml={3} mb={3}>
+              Proximos eventos
+            </Typography>
+            
             {agendaShows.map((item, index) =>
               <ListItem key={index}>
                 <Stack direction='row' justifyContent={'start'} p="0 1rem" width="100%">
@@ -65,6 +74,7 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
                 </Stack>
               </ListItem>
             )}
+
           </StyledList>
 
         </Stack>

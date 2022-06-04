@@ -20,7 +20,7 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
   `
 
   const HeroImage = styled(Stack)`
-    background: linear-gradient(to left top, #240000a3, #ff0000b8),url(/images/foto_horiz.jpg) no-repeat 50% 50%;
+    background: linear-gradient(to left top, #000000ba, #ff000094),url(/images/foto_horiz.jpg) no-repeat 50% 50%;
     background-size: cover;
     filter: brightness(50%);
     box-shadow:   inset 0 24px 36px  40px  rgba(0,0,0,.);
@@ -31,7 +31,7 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
 `
 
   const HeroCenter = styled(Stack)`
-    margin: 0 auto;
+    margin: 0 3rem;
   `
 
   return (
@@ -42,13 +42,11 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
 
       <HeroCenter direction="row" justifyContent="space-between" sx={{ maxWidth: '100%' }}>
 
-        <Grid container sx={{ margin: '0 3rem' }}>
 
+        <Stack direction="column" marginTop={{ xs: '100px', md: "250px" }} width={{ xs: '100%' }} mt="15%" color="white" zIndex={999}>
 
-          <Grid item direction="column" marginTop={{ xs: '100px', md: "200px" }} width={{ xs: '100%', md: '60%' }} mt="15%" color="white" zIndex={999}>
-
-            {!isMobile ? <>
-              <Stack direction={{ sx: 'column', md: 'row' }}>
+          {!isMobile ? <>
+            {/* <Stack direction={{ sx: 'column', md: 'row' }}>
 
                 <Typography size='h1' weight='old' sx={{ transform: 'rotate(3deg)', marginBottom: '-3rem', textShadow: '2px 7px 5px #0000008a' }}>
                   Doidon
@@ -61,37 +59,40 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
 
               <Typography size='h4' weight='old' sx={{ transform: 'rotate(-7deg)', marginBottom: '6rem', fontSize: '3rem', marginLeft: '2rem', textShadow: '2px 7px 5px #0000008a' }}>
                 e os Van der Zicrey
-              </Typography>
+              </Typography> */}
+            <Typography size='h3' weight='old'>Bem-vindo ao</Typography>
+
+            <Typography size='h1' weight='old'
+              sx={{ marginBottom: '0', textShadow: '2px 7px 5px #0000008a' }}>
+              Doidon Pixote</Typography>
+            <Typography size='h2' weight='old'> e os Van der Zicrey</Typography>
+          </>
+            : <>
+              <Typography size='h1' weight='old'>Doidon</Typography>
+              <Typography size='h1' weight='old'>Pixote</Typography>
+              <Typography size='h4' weight='old'> e os Van der Zicrey</Typography>
             </>
-              : <>
-                <Typography size='h1' weight='old'>Doidon</Typography>
-                <Typography size='h1' weight='old'>Pixote</Typography>
-                <Typography size='h4' weight='old'> e os Van der Zicrey</Typography>
-              </>
-            }
+          }
 
-            <List style={{ maxWidth: "50%" }}>
-              <Stack direction="row">
-                <ListItemButton sx={{ paddingLeft: 0 }} component="a" target="_blank"
-                  href="https://www.amazon.de/music/player/artists/B083PV5JS6/doidon-pixote-e-os-van-der-zicrey">
-                  <img src="/images/SVG/Amazon.svg" alt="amazon" />
-                </ListItemButton>
+          <Grid container mt={3} style={{ maxWidth: "50%" }}>
+            <Grid item direction="row">
+              <ListItemButton sx={{ paddingLeft: 0 }} component="a" target="_blank"
+                href="https://www.amazon.de/music/player/artists/B083PV5JS6/doidon-pixote-e-os-van-der-zicrey">
+                <img src="/images/SVG/Amazon.svg" alt="amazon" />
+              </ListItemButton>
+            </Grid>
+            <Grid item direction="row">
 
-                <ListItemButton component="a" target="_blank"
-                  href="https://open.spotify.com/artist/1H3kmZKczSXJ2jum4zrqR3">
-                  <img src="/images/SVG/Spotify.svg" alt="spotify" />
-                </ListItemButton>
-              </Stack>
-            </List>
-
+              <ListItemButton component="a" target="_blank"
+                href="https://open.spotify.com/artist/1H3kmZKczSXJ2jum4zrqR3">
+                <img src="/images/SVG/Spotify.svg" alt="spotify" />
+              </ListItemButton>
+            </Grid>
           </Grid>
 
-          {!isMobile &&
-            <Grid item direction="column" sx={{ marginTop: "220px" }} width={{ xs: '100%', md: '30%' }} >
-              <ImgSwiper />
-            </Grid>
-          }
-        </Grid>
+        </Stack>
+
+
       </HeroCenter>
 
       <FlexSpacer minHeight={6} />

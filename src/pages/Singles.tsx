@@ -18,24 +18,43 @@ const Singles: FC<SinglesProps> = ({ pageWidth }) => {
 
     return (
         <Singles id="Singles">
+
+
+            <Typography size='h2' weight='old'>
+                Discografia
+            </Typography>
+            <FlexSpacer minHeight={3} />
+
+
             <Typography size='h3' weight='old'>
                 Singles
             </Typography>
 
             <FlexSpacer minHeight={3} />
 
-            <Grid container spacing={1} margin="0 auto">
+            <Grid container spacing={4} margin="0 auto">
                 <Grid item xs={12} md={3}>
-                    <img src="/images/doidon_logo.jpeg" alt="logo" width="100%" />
+                    <img src="/images/capa1.jpg" alt="capa" width="100%" />
                 </Grid>
                 <Grid item xs={12} md={3}>
-                    <img src="/images/doidon_logo.jpeg" alt="logo" width="100%" />
+                    <img src="/images/capa2.jpg" alt="capa" width="100%" />
                 </Grid>
                 <Grid item xs={12} md={3}>
-                    <img src="/images/doidon_logo.jpeg" alt="logo" width="100%" />
+                    <img src="/images/capa3.jpg" alt="capa" width="100%" />
                 </Grid>
-                <Grid item xs={12} md={3}>
-                    <img src="/images/doidon_logo.jpeg" alt="logo" width="100%" />
+                <Grid item xs={12} md={3}
+                    sx={
+                        {
+                            position: 'relative'
+                        }
+                    }>
+                    <img src="/images/SVG/black.svg" alt="coming" width="100%" />
+                    <Typography sx={
+                        {
+                            position: 'absolute',
+                            top: '50%',
+                        }
+                    }>em breve mais <br /> pragmatismo</Typography>
                 </Grid>
             </Grid>
         </Singles>

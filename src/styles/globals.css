@@ -65,6 +65,14 @@ a {
 }
 
 @font-face {
+  font-family: "doidon zombie";
+  src: url("../fonts/Zombie.woff2");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "doidon old";
   src: url("../fonts/Old-Press.woff2");
   font-style: normal;
@@ -167,8 +175,7 @@ ul {
 
  
 .bg-light {
-  background-color: rgba(255, 255, 255, 0.513);
-  color: black;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .bg-dark {

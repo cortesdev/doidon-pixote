@@ -8,6 +8,7 @@ import Contact from './contact'
 import Hero from '../design-system/organisms/Hero'
 import Singles from './Singles'
 import Videos from './videos'
+import Parcerias from './parcerias'
 
 
 interface HomeProps {
@@ -27,13 +28,15 @@ const Home: FC<HomeProps> = ({ pageWidth }) => {
       <Container>
 
         {/* Subpaginas */}
+        <Parcerias />
+        <Singles />
+        <FlexSpacer minHeight={5} />
         <FlexSpacer minHeight={5} />
         <Agenda />
         <FlexSpacer minHeight={5} />
         <Videos />
         <FlexSpacer minHeight={5} />
-        <Singles />
-        <FlexSpacer minHeight={5} />
+       
         <Contact />
 
         <FlexSpacer minHeight={10} />

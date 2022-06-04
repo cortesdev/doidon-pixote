@@ -1,7 +1,9 @@
 import styled from '@emotion/styled'
-import { List, ListItem, ListItemButton, Stack } from '@mui/material'
+import { Grid, List, ListItem, ListItemButton, Stack } from '@mui/material'
 import { FC } from 'react'
 import { Copyright } from '../../atoms/Copyright'
+import { FlexSpacer } from '../../atoms/FlexSpacer'
+import FooterLinks from '../../molecules/FooterLinks'
 
 
 interface FooterProps {
@@ -15,10 +17,10 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
         width: 100%;
         bottom: 0;
         margin: 0 auto;
-        background: #ffffffcf;
     `
     const StyledImage = styled.img`
        width: 20px;
+       filter: invert(1);
     `
 
     const linkData = [
@@ -30,18 +32,28 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
     return (
         <StyledFooter>
             <Stack direction="row" justifyContent="space-between" p={2}>
+                <Grid container>
+                    <Grid item xs={12} md={9}>
+                        <FooterLinks />
+                    </Grid>
+                    <Grid item xs={12} md={3}>
+                        <Stack direction="column" justifyContent="space-between" p={2}>
 
-                <Copyright />
+                            <List>
+                                <Stack direction="row">
+                                    {linkData.map((item, index) => (
+                                        <ListItemButton component="a" target="_blank" href={item.url} sx={{ borderRadious: 50 }}>
+                                            <StyledImage src={item.src} alt={item.alt} />
+                                        </ListItemButton>
+                                    ))}
+                                </Stack>
+                            </List>
+                        </Stack>
+                        <FlexSpacer minHeight={6} />
 
-                <List>
-                    <Stack direction="row">
-                        {linkData.map((item, index) => (
-                            <ListItemButton component="a" target="_blank" href={item.url} sx={{borderRadious: 50}}>
-                                <StyledImage src={item.src} alt={item.alt} />
-                            </ListItemButton>
-                        ))}
-                    </Stack>
-                </List>
+                        <Copyright />
+                    </Grid>
+                </Grid>
             </Stack>
         </StyledFooter>
     )

@@ -18,23 +18,28 @@ const Videos: FC<VideosProps> = ({ pageWidth }) => {
 
     return (
         <Videos id="videos">
-            <Typography size='h3' weight='old'>
+
+
+            <Typography size='h2' weight='old'>
                 Videos
             </Typography>
             <FlexSpacer minHeight={3} />
 
-            <Grid container spacing={1} margin="0 auto">
-                <Grid item xs={12} md={3}>
-                    <img src="/images/doidon_logo.jpeg" alt="logo" width="100%" />
+
+            <Typography size='h3' weight='old'>
+                Youtube
+            </Typography>
+            <FlexSpacer minHeight={3} />
+
+            <Grid container spacing={4} margin="0 auto">
+                <Grid item xs={12} md={4}>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/zIB802dOk0A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </Grid>
-                <Grid item xs={12} md={3}>
-                    <img src="/images/doidon_logo.jpeg" alt="logo" width="100%" />
+                <Grid item xs={12} md={4}>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/9DyQk5nBEl8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </Grid>
-                <Grid item xs={12} md={3}>
-                    <img src="/images/doidon_logo.jpeg" alt="logo" width="100%" />
-                </Grid>
-                <Grid item xs={12} md={3}>
-                    <img src="/images/doidon_logo.jpeg" alt="logo" width="100%" />
+                <Grid item xs={12} md={4}>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ROSaLO8W2rY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </Grid>
             </Grid>
         </Videos>
