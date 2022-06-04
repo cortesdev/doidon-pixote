@@ -27,8 +27,8 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
 
   return (
     <Container id="agenda">
-      <Typography size='h3' weight='old'>
-        Tour e agenda para Shows
+      <Typography size='h2' weight='old'>
+        Tour
       </Typography>
       <FlexSpacer minHeight={3} />
 
@@ -48,7 +48,7 @@ const Agenda: FC<AgendaProps> = ({ pageWidth }) => {
             <Typography size="h3" weight='old' ml={3} mb={3}>
               Proximos eventos
             </Typography>
-            
+
             {agendaShows.map((item, index) =>
               <ListItem key={index}>
                 <Stack direction='row' justifyContent={'start'} p="0 1rem" width="100%">

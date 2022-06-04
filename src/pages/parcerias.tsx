@@ -28,10 +28,7 @@ const Parcerias: FC<ParceriasProps> = ({ pageWidth }) => {
   `
 
   return (
-    <Container id="Parcerias" mb={4}>
-
-      <FlexSpacer minHeight={3} />
-
+    <Container id="Parcerias" mb={4} sx={{opacity: .35}}>
       <Grid container alignItems="center">
         {marcas.map((item) => (
           <Grid item xs={12} md={2}>
@@ -40,19 +37,9 @@ const Parcerias: FC<ParceriasProps> = ({ pageWidth }) => {
             />
           </Grid>
         ))}
-
-
-
-
-
       </Grid>
 
-
-
-
       <FlexSpacer minHeight={5} />
-
-
     </Container>
   )
 }

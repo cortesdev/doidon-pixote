@@ -36,10 +36,11 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
                     <Grid item xs={12} md={9}>
                         <FooterLinks />
                     </Grid>
+                    
                     <Grid item xs={12} md={3}>
-                        <Stack direction="column" justifyContent="space-between" p={2}>
+                        <Stack direction="column" justifyContent="space-between" p={2} >
 
-                            <List>
+                            <List >
                                 <Stack direction="row">
                                     {linkData.map((item, index) => (
                                         <ListItemButton component="a" target="_blank" href={item.url} sx={{ borderRadious: 50 }}>

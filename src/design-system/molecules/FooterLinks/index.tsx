@@ -16,7 +16,7 @@ const FooterLinks = () => {
             <Grid item xs={12} md={3}>
                 <Typography size="h4">Sitemap</Typography>
 
-                <List sx={{ alignSelf: 'center' }}>
+                <List sx={{textTransform: 'capitalize', alignSelf: 'center'}}>
                     <Stack direction="column">
                         <StyledListItem
                         //  sx={{ transform: 'rotate(2deg)' }}
@@ -55,7 +55,7 @@ const FooterLinks = () => {
             <Grid item xs={12} md={3}>
                 <Typography size="h4">Mais sobre</Typography>
 
-                <List sx={{ alignSelf: 'center' }}>
+                <List sx={{ alignSelf: 'center', textTransform: 'capitalize', }}>
                     <Stack direction="column">
                         <StyledListItem
                         //  sx={{ transform: 'rotate(2deg)' }}
