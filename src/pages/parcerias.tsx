@@ -28,10 +28,10 @@ const Parcerias: FC<ParceriasProps> = ({ pageWidth }) => {
   `
 
   return (
-    <Container id="Parcerias" mb={4} sx={{opacity: .35}}>
-      <Grid container alignItems="center">
+    <Container id="Parcerias" mb={4} sx={{ opacity: .35 }}>
+      <Grid container alignItems="center" rowSpacing={4}>
         {marcas.map((item) => (
-          <Grid item xs={6} md={2}>
+          <Grid item xs={6} md={2} sx={{ display: 'flex', justifyContent: 'center' }}>
             <img src={item.url} height={item.height} alt="logo"
               style={{ marginBottom: '1rem', filter: item.contrast === "dark" ? 'invert(1)' : '' }}
             />

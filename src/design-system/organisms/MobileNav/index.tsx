@@ -77,7 +77,7 @@ const MobileNav: FC<MobileNavProps> = ({ }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <StyledAppBar sx={{ width: isMobile ? '102vw' : '100%' }}>
+    <StyledAppBar sx={{ width: isMobile ? '101vw' : '100%' }}>
       <Stack direction="row"
         sx={{
           alignItems: 'center',

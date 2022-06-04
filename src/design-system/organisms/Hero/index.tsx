@@ -102,7 +102,6 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
 
       </HeroCenter>
 
-      <FlexSpacer minHeight={6} />
 
     </Container >
   )
