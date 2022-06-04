@@ -40,8 +40,8 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
                     <Grid item xs={12} md={9}>
                         <FooterLinks />
 
-                        <FlexSpacer minHeight={2}></FlexSpacer>
-                        <Typography size='small'>Website <a href="http://cortesdev.de" target="_blank">{' - '} CortesDev.de</a></Typography>
+                        <FlexSpacer minHeight={3}></FlexSpacer>
+                        <Typography size='small'>Desenvovedor {' - '} <a href="http://cortesdev.de" target="_blank">{' '} CortesDev.de</a></Typography>
                     </Grid>
 
                     <Grid item xs={12} md={3}>

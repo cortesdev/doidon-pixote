@@ -229,7 +229,7 @@ export const theme = createTheme({
     },
     h6: {
       fontSize: "1.25rem",
-      lineHeight: "1rem",
+      lineHeight: "1.25",
     },
   },
 });
