@@ -132,7 +132,7 @@ export const theme = createTheme({
     MuiButton: {
       root: {                
         "&:not($sizeLarge):not($sizeSmall) $label": {
-          height: '38px'
+          height: '38px',
           // font: "normal normal 500 0.875rem/1.6875rem ",
         }
       },
@@ -150,7 +150,7 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#black",
+      main: "#000",
       dark: "#0017E5",
       light: "#1A30FF",
     },
@@ -164,10 +164,10 @@ export const theme = createTheme({
   },
   colors: {
     // Brand Primary
-    secondary: "#FF5C00",
+    secondary: "#fff",
     tertiary: "#1AD24E",
-    text: "#000",
-    background: "#000",
+    text: "#fff",
+    background: "#000000",
     primary: "#black",
     light: "#edeff1",
     lighter: "#F2F4FF",

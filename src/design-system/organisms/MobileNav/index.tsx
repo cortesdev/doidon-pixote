@@ -9,11 +9,11 @@ import {
 } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { FC } from 'react'
-import { theme } from '../../../styles/theme';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close'
 import { MobileNavItems } from '../../molecules/MobileNavItems';
 import { useNavigate } from 'react-router-dom';
+import { theme } from '../../../styles/theme';
 
 
 interface MobileNavProps {
@@ -23,7 +23,7 @@ interface MobileNavProps {
 
 const StyledAppBar = styled(AppBar)`
     position: sticky;
-    background: ${theme.colors.white};
+    background-color: ${theme.colors.black} !important;
     box-shadow: none;
     border-radius: 4px;
     border: 1px solid #D9D9D9;    
@@ -77,7 +77,7 @@ const MobileNav: FC<MobileNavProps> = ({ }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <StyledAppBar sx={{width: isMobile ? '101vw' : '100%'}}>
+    <StyledAppBar sx={{ width: isMobile ? '102vw' : '100%' }}>
       <Stack direction="row"
         sx={{
           alignItems: 'center',
@@ -87,16 +87,16 @@ const MobileNav: FC<MobileNavProps> = ({ }) => {
         <Box onClick={() => navigate('/')} sx={{ cursor: 'pointer' }}>
           <img
             style={{ margin: 'auto 0' }}
-            src="/images/doidon_logo.jpeg"
+            src="/images/SVG/logo-doidon-white.svg"
             alt="doidon logo"
-            width={40} 
-            height={40} />
+            width={100}
+          />
         </Box>
 
         {([`left`] as const).map((anchor) => (
           <React.Fragment key={anchor}>
             {state === false ?
-              <IconButton color="primary" size="small" onClick={toggleDrawer(anchor, true)}>
+              <IconButton size="small" onClick={toggleDrawer(anchor, true)}>
                 <MenuIcon />
               </IconButton>
               :
@@ -107,6 +107,11 @@ const MobileNav: FC<MobileNavProps> = ({ }) => {
               anchor={anchor}
               open={orientation[anchor]}
               onClose={toggleDrawer(anchor, false)}
+              PaperProps={{
+                sx: {
+                  backgroundColor: theme.colors.dark,
+                }
+              }}
             >
               {list(anchor)}
             </Drawer>

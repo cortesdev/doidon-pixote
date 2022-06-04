@@ -31,9 +31,9 @@ const Parcerias: FC<ParceriasProps> = ({ pageWidth }) => {
     <Container id="Parcerias" mb={4} sx={{opacity: .35}}>
       <Grid container alignItems="center">
         {marcas.map((item) => (
-          <Grid item xs={12} md={2}>
+          <Grid item xs={6} md={2}>
             <img src={item.url} height={item.height} alt="logo"
-              style={{ filter: item.contrast === "dark" ? 'invert(1)' : '' }}
+              style={{ marginBottom: '1rem', filter: item.contrast === "dark" ? 'invert(1)' : '' }}
             />
           </Grid>
         ))}

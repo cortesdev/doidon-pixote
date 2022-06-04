@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Grid, List, ListItemButton, Stack } from '@mui/material'
+import { Grid, Link, List, ListItemButton, Stack } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { FC } from 'react'
 import { FlexSpacer } from '../../atoms/FlexSpacer'
@@ -40,10 +40,10 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
 
       <FlexSpacer minHeight={6} />
 
-      <HeroCenter direction="row" justifyContent="space-between" sx={{ maxWidth: '100%' }}>
+      <HeroCenter direction="row" justifyContent="space-between" sx={{ maxWidth: '100%', display: 'flex', height: '89vh' }}>
 
 
-        <Stack direction="column" marginTop={{ xs: '100px', md: "250px" }} width={{ xs: '100%' }} mt="15%" color="white" zIndex={999}>
+        <Stack direction="column" marginTop={{ xs: '100px', md: "auto" }} width={{ xs: '100%' }} mt="15%" color="white" zIndex={999}>
 
           {!isMobile ? <>
             {/* <Stack direction={{ sx: 'column', md: 'row' }}>
@@ -74,25 +74,26 @@ const Hero: FC<HeroProps> = ({ pageWidth, isMobile }) => {
             </>
           }
 
-          <Grid container mt={3} style={{ maxWidth: "50%" }}>
+          <Grid container spacing={2} rowSpacing={2} mt={3} style={{ maxWidth: "50%" }}>
             <Grid item direction="row">
-              <ListItemButton sx={{ paddingLeft: 0 }} component="a" target="_blank"
+              <Link
+                sx={{ paddingLeft: 0 }}
+                target="_blank"
                 href="https://www.amazon.de/music/player/artists/B083PV5JS6/doidon-pixote-e-os-van-der-zicrey">
                 <img src="/images/SVG/Amazon.svg" alt="amazon"
                   style={{ borderRadius: 5, border: '1px solid white' }}
                 />
-              </ListItemButton>
+              </Link>
             </Grid>
             <Grid item direction="row">
 
-              <ListItemButton
-                component="a"
+              <Link
                 target="_blank"
                 href="https://open.spotify.com/artist/1H3kmZKczSXJ2jum4zrqR3">
                 <img src="/images/SVG/Spotify.svg" alt="spotify"
                   style={{ borderRadius: 5, border: '1px solid white' }}
                 />
-              </ListItemButton>
+              </Link>
             </Grid>
           </Grid>
 

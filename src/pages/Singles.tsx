@@ -34,13 +34,13 @@ const Singles: FC<SinglesProps> = ({ pageWidth }) => {
 
             <Grid container spacing={4} margin="0 auto">
                 <Grid item xs={12} md={3}>
-                    <img src="/images/capa1.jpg" alt="capa" width="100%" />
+                    <img src="/images/capa1.jpg" alt="capa" width="90%" />
                 </Grid>
                 <Grid item xs={12} md={3}>
-                    <img src="/images/capa2.jpg" alt="capa" width="100%" />
+                    <img src="/images/capa2.jpg" alt="capa" width="90%" />
                 </Grid>
                 <Grid item xs={12} md={3}>
-                    <img src="/images/capa3.jpg" alt="capa" width="100%" />
+                    <img src="/images/capa3.jpg" alt="capa" width="90%" />
                 </Grid>
                 <Grid item xs={12} md={3}
                     sx={
@@ -48,7 +48,7 @@ const Singles: FC<SinglesProps> = ({ pageWidth }) => {
                             position: 'relative'
                         }
                     }>
-                    <img src="/images/SVG/black.svg" alt="coming" width="100%" />
+                    <img src="/images/SVG/black.svg" alt="coming" width="90%" />
                     <Typography sx={
                         {
                             position: 'absolute',

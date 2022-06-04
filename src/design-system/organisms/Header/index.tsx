@@ -27,7 +27,6 @@ const Header: FC<HeaderProps> = ({ pageWidth }) => {
     `
 
     const StyledContainer = styled(Stack)`
-        max-width: 1200px;
         margin: 0 auto;
         padding: 1rem;
     `
@@ -36,7 +35,7 @@ const Header: FC<HeaderProps> = ({ pageWidth }) => {
         <StyledHeader className={scroll ? "bg-light" : "bg-dark"}        >
             <StyledContainer direction="row" justifyContent="space-between">
                 <Link href='/'>
-                    <img src="/images/SVG/logo-doidon-white.svg" height="70px" alt="logo" />
+                    <img src="/images/SVG/logo-doidon-white.svg" style={{filter: 'drop-shadow(3px 5px 5px rgb(0 0 0 / 0.9))'}} height="70px" alt="logo" />
                 </Link>
 
                 <Navbar />
