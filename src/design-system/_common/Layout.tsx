@@ -29,20 +29,23 @@ export const Layout: FC<LayoutProps> = ({
   ...props }) => {
 
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+ 
 
   return (
-    <article className={className}>
-      {isMobile && <MobileDrawer />}
+    <>
+      <article className={className}>
+        {isMobile && <MobileDrawer />}
 
-      {!isMobile && <Header pageWidth={pageWidth} />}
+        {!isMobile && <Header pageWidth={pageWidth} />}
 
-      <Hero pageWidth={pageWidth} isMobile={isMobile} />
+        <Hero pageWidth={pageWidth} isMobile={isMobile} />
 
-      <Stack direction="row" spacing={2} pt={2} mx={{xs: 3, md: 5}}>
-        {children}
-      </Stack>
+        <Stack direction="row" spacing={2} pt={2} mx={{ xs: 3, md: 5 }}>
+          {children}
+        </Stack>
 
-      <Footer pageWidth={pageWidth} />
-    </article >
+        <Footer pageWidth={pageWidth} />
+      </article >
+    </>
   );
 }

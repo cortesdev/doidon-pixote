@@ -5,8 +5,16 @@ import { FlexSpacer } from '../atoms/FlexSpacer';
 import Typography from '../atoms/Typography';
 
 const DivLoading = styled(Stack)`
-    background: rgb(0 68 255);
-    height: 100vh;
+
+    z-index: 99999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background: rgb(0 0 0);
+    height: 100%;
     align-items: center;
     padding: 2rem 10rem;
     color: white;
@@ -29,13 +37,17 @@ export const Loader: FC = ({ ...props }) => {
     console.log("Loader");
 
     return (
-        <DivLoading direction="column">
+        <DivLoading direction="column" className='loader'>
             <CenterVertical>
-                <img src="/svg/doidon_logo_white.svg" alt="doidon brand home" width={400} height={450} />
+                <img src="/images/SVG/logo-rot.svg" alt="doidon brand home" width={400} height={450} />
 
-                <CenterTitle>                   
+                <CenterTitle>
                     <OneLine>
-                        <Typography size='16px'>LOADING  <FlexSpacer minWidth={1}/><img src="/images/loader.gif" alt="doidon loader" width={20} height={20} /></Typography>
+                        <Typography size='16px'>
+                            Carregando
+                            <FlexSpacer minWidth={1} />
+                            <img src="/images/loader.gif" alt="doidon loader" width={20} height={20} style={{ filter: 'invert(1)' }} />
+                        </Typography>
                     </OneLine>
                 </CenterTitle>
             </CenterVertical>

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Stack } from '@mui/material'
+import { Link, Stack } from '@mui/material'
 import { FC, useEffect, useState } from 'react'
 import Navbar from '../../molecules/Navbar'
 
@@ -9,24 +9,24 @@ interface HeaderProps {
 
 
 
-const Header: FC<HeaderProps> = ({pageWidth}) => {
-    
+const Header: FC<HeaderProps> = ({ pageWidth }) => {
+
     const [scroll, setScroll] = useState(false);
-    
-     useEffect(() => {
-       window.addEventListener("scroll", () => {
-         setScroll(window.scrollY > 50);
-       });
-     }, []);
-    
-    const StyledHeader = styled.header `
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 50);
+        });
+    }, []);
+
+    const StyledHeader = styled.header`
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 9999;
     `
-    
-    const StyledContainer = styled(Stack) `
+
+    const StyledContainer = styled(Stack)`
         max-width: 1200px;
         margin: 0 auto;
         padding: 1rem;
@@ -35,7 +35,9 @@ const Header: FC<HeaderProps> = ({pageWidth}) => {
     return (
         <StyledHeader className={scroll ? "bg-light" : "bg-dark"}        >
             <StyledContainer direction="row" justifyContent="space-between">
-                <img src="/images/SVG/logo-doidon-white.svg" height="70px" alt="logo" />
+                <Link href='/'>
+                    <img src="/images/SVG/logo-doidon-white.svg" height="70px" alt="logo" />
+                </Link>
 
                 <Navbar />
             </StyledContainer>
