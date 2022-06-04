@@ -1,10 +1,12 @@
 import styled from '@emotion/styled'
-import { Grid, List, ListItem, ListItemButton, Stack } from '@mui/material'
+import { Box, Grid, List, ListItem, ListItemButton, Stack } from '@mui/material'
 import { FC } from 'react'
+import { Navigate } from 'react-router-dom'
 import { Copyright } from '../../atoms/Copyright'
 import { FlexSpacer } from '../../atoms/FlexSpacer'
 import FooterLinks from '../../molecules/FooterLinks'
 
+import { useNavigate } from "react-router-dom";
 
 interface FooterProps {
     pageWidth?: any
@@ -12,6 +14,7 @@ interface FooterProps {
 
 const Footer: FC<FooterProps> = ({ pageWidth }) => {
 
+    const navigate = useNavigate();
 
     const StyledFooter = styled.footer`       
         width: 100%;
@@ -50,8 +53,10 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
                                 </Stack>
                             </List>
                         </Stack>
-                        
-                        <img src="/images/SVG/logo-rot.svg" alt="logo" height={100} style={{display: 'flex', margin: '0 2rem 2rem auto '}}/>
+
+                        <Box onClick={() => navigate('/#home')}>
+                            <img src="/images/SVG/logo-rot.svg" alt="logo" height={100} style={{ display: 'flex', margin: '0 4rem 2rem auto ' }} />
+                        </Box>
 
                         <Copyright />
                     </Grid>
