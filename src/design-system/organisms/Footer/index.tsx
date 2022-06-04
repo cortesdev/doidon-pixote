@@ -36,7 +36,7 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
                     <Grid item xs={12} md={9}>
                         <FooterLinks />
                     </Grid>
-                    
+
                     <Grid item xs={12} md={3}>
                         <Stack direction="column" justifyContent="space-between" p={2} >
 
@@ -50,7 +50,8 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
                                 </Stack>
                             </List>
                         </Stack>
-                        <FlexSpacer minHeight={6} />
+                        
+                        <img src="/images/SVG/logo-rot.svg" alt="logo" height={100} style={{display: 'flex', margin: '0 2rem 2rem auto '}}/>
 
                         <Copyright />
                     </Grid>
