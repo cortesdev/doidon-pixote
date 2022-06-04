@@ -17,9 +17,9 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
     const navigate = useNavigate();
 
     const StyledFooter = styled.footer`       
-        width: 100%;
+        maxWidth: ${pageWidth};
         bottom: 0;
-        margin: 0 auto;
+        margin: 0 3rem;
     `
     const StyledImage = styled.img`
        width: 20px;
@@ -55,7 +55,7 @@ const Footer: FC<FooterProps> = ({ pageWidth }) => {
                         </Stack>
 
                         <Box onClick={() => navigate('/#home')}>
-                            <img src="/images/SVG/logo-rot.svg" alt="logo" height={100} style={{ display: 'flex', margin: '0 4rem 2rem auto ' }} />
+                            <img src="/images/SVG/logo-rot.svg" alt="logo" height={100} style={{ display: 'flex', margin: '0 3rem 2rem auto ' }} />
                         </Box>
 
                         <Copyright />
