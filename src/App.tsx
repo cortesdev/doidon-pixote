@@ -25,16 +25,11 @@ const App: FC<AppProps> = ({ children,
   const fetchData = () => {
     setTimeout(() => {
       setIsLoaded(true);
-    }, 1500);
+    }, 4000);
   }
 
   useEffect(() => {
-
-    setTimeout(() => {
-
-      fetchData()
-
-    }, 1500);
+    fetchData()
 
   }, []);
 
